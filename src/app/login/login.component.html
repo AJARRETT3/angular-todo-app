@@ -1,5 +1,6 @@
 <div class="container card mt-4">
     <div class="card-body">
+
         <div *ngIf="invalidLogin" class="card-title text-center">
             <small class="text-danger">
                 {{errorMessage}}
@@ -7,6 +8,7 @@
         </div>
 
         <div class="container">
+
             <form action="">
                 <div class="form-group">
                     <label for="username">User Name: </label>
@@ -17,6 +19,7 @@
                 </div>
                 <button type="button" class="btn btn-success mt-2" (click)=handleLogin()>Login</button>
             </form>
+            
         </div>
     </div>
 </div>
