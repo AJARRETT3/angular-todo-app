@@ -1,2 +1,22 @@
-User Name : <input type="text" name="users">
-Password : <input type="password" name="password">
+<div class="container card mt-4">
+    <div class="card-body">
+        <div *ngIf="invalidLogin" class="card-title text-center">
+            <small class="text-danger">
+                {{errorMessage}}
+            </small>
+        </div>
+
+        <div class="container">
+            <form action="">
+                <div class="form-group">
+                    <label for="username">User Name: </label>
+                    <input type="text" class="form-control" id="username" name="username" [(ngModel)]="username">
+
+                    <label for="password">Password :</label>
+                    <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password">
+                </div>
+                <button type="button" class="btn btn-success mt-2" (click)=handleLogin()>Login</button>
+            </form>
+        </div>
+    </div>
+</div>
