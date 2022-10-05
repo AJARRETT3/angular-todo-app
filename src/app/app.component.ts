@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todo';
+  greeting: string = "Welcome to My ToDo Application!";
+  description: string = "This project is a vehicle for my learning of angular and spring boot.";
+  message: string = "I hope that you can find it helpful in your life today."
 }
