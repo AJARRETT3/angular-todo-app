@@ -1,10 +1,10 @@
+<h1>Login!</h1>
+
 <div class="container card mt-4">
     <div class="card-body">
-
-        <div *ngIf="invalidLogin" class="card-title text-center">
-            <small class="text-danger">
-                {{errorMessage}}
-            </small>
+        
+        <div class="alert alert-warning" *ngIf="invalidLogin">
+            {{errorMessage}}
         </div>
 
         <div class="container">
