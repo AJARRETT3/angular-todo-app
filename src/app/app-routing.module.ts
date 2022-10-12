@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ErrorComponent } from './error/error.component';
 import { ListTodosComponent } from './list-todos-component/list-todos-component.component';
+import { LogoutComponent } from './logout/logout.component';
 
 //welcome
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'welcome/:name', component: WelcomeComponent },
   { path: 'todos', component: ListTodosComponent },
+  { path: 'logout', component: LogoutComponent },
   // ** is LAST
   { path: '**', component: ErrorComponent }
 ];
