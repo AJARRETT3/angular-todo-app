@@ -2,8 +2,20 @@
 
 <div class="container card mt-4">
     <div class="card-body">
-        Welcome {{name}}.
-        Welcome to our ToDo App!
-        You can manage your todos <a routerLink="/todos">here</a>
+        <div class="container">
+            Welcome {{name}}.
+            Welcome to our ToDo App!
+            You can manage your todos <a routerLink="/todos">here</a>
+        </div>
+        
+        <div class="container">
+            Click here to get a customized welcome message
+            <button (click)="getWelcomeMessage()" class="btn btn-sm btn-success">Get Welcome Message</button>
+        </div>
+
+        <div class="container" *ngIf="welcomeMessageFromService">
+            <h2>Your Cusomized Welcome Message</h2>
+            {{welcomeMessageFromService}}
+        </div>
     </div>
 </div>
