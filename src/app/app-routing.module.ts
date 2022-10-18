@@ -7,6 +7,7 @@ import { ErrorComponent } from './error/error.component';
 import { ListTodosComponent } from './list-todos-component/list-todos-component.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RouteGuardService } from './service/route-guard.service';
+import { TodoComponent } from './todo/todo.component';
 
 //welcome
 const routes: Routes = [
@@ -14,8 +15,10 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'welcome/:name', component: WelcomeComponent, canActivate: [RouteGuardService] },
   { path: 'todos', component: ListTodosComponent, canActivate: [RouteGuardService] },
+  { path: 'todos/:id', component: TodoComponent, canActivate: [RouteGuardService] },
   { path: 'logout', component: LogoutComponent, canActivate: [RouteGuardService] },
-  // ** is LAST
+
+  // ** is ALWAYS LAST -- it picks up anything that doesn't match a path listed above
   { path: '**', component: ErrorComponent }
 ];
 

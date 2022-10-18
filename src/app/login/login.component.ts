@@ -24,9 +24,7 @@ export class LoginComponent implements OnInit {
   }
 
   handleLogin() {
-    // console.log('Username: ', this.username);
     if (this.hardcodedApplicationService.authenticate(this.username, this.password)) {
-      //Redirect to welcome page
       this.router.navigate(['welcome', this.username]);
       this.invalidLogin = false;
     } else {

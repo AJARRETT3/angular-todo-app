@@ -1,0 +1,23 @@
+<h1>Todo</h1>
+
+<div class="container card mt-4">
+    <div class="card-body">
+
+        <fieldset class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" [(ngModel)]="todo.description" class="form-control" name="description" id="description"
+                required="required">
+        </fieldset>
+
+        <fieldset class="mb-3">
+            <label for="targetDate" class="form-label">Target Date</label>
+            <input type="date" [ngModel]="todo.targetDate | date: 'yyyy-MM-dd'" (ngModelChange)="todo.targetDate = $event"
+                class="form-control" name="targetDate" id="targetDate" required="required">
+        </fieldset>
+
+        <fieldset mb-3>
+            <button type="button" class="btn btn-success" (click)="saveTodo()">Save</button>
+        </fieldset>
+
+    </div>
+</div>
